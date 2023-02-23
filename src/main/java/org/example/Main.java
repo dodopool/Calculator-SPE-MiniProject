@@ -40,7 +40,7 @@ public class Main
 	}
 	else if(choice == 2)
 	{
-		System.out.print("Enter the number of factorial is to be calcualted: ");
+		System.out.print("Enter the number of factorial is to be calculated: ");
 		int inpX = inputReceiver.nextInt();
 		if(inpX < 0)
 		{
@@ -58,6 +58,39 @@ public class Main
 			System.out.println(res);
 			System.exit(0);
 		}
+	}
+	else if(choice == 3)
+	{
+		System.out.print("Enter the number whose natural log is to be calculated: ");
+		double inpX = inputReceiver.nextDouble();
+		if(inpX < 0)
+		{
+			System.out.println("Well, natural log of negative numbers is not defined!, Exiting...");
+			System.exit(1);
+		}
+		else if(inpX == 0.0)
+		{
+			System.out.println("Natural log of 0 is not defined! Exiting...");
+			System.exit(1);
+		}
+		else
+		{
+			double res = Math.log(inpX);
+			System.out.print("The natural log is: ");
+			System.out.println(res);
+			System.exit(0);
+		}
+	}
+	else
+	{
+		System.out.print("Enter the base: ");
+		double base = inputReceiver.nextDouble();
+		System.out.print("Enter the power: ");
+		double power = inputReceiver.nextDouble();
+		double res = Math.pow(base, power);
+		System.out.print("The result is: ");
+		System.out.println(res);
+		System.exit(0);
 	}
     }
 }
