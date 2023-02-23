@@ -2,67 +2,68 @@ package org.example;
 
 public class Calculator
 {
-	void computeSquareRoot(double inpX)
+	Double computeSquareRoot(double inpX)
 	{
                 if(inpX < 0)
                 {
                         System.out.println("Negative number, really? Exiting...");
-                        System.exit(1);
+			return null;
                 }
                 else
                 {
                         System.out.print("The square root is: ");
-                        System.out.println(Math.sqrt(inpX));
-                        System.exit(0);
+                        Double res = Math.sqrt(inpX);
+			System.out.println(res);
+			return res;
                 }
 	}
 
-	void computeFactorial(int inpX)
+	Integer computeFactorial(int inpX)
 	{
 		if(inpX < 0)
                 {
                         System.out.println("Negative number, seriously? Exiting...");
-                        System.exit(1);
+                        return null; 
                 }
                 else
                 {
-                        int res = 1;
+                        Integer res = 1;
                         for(int i = 1; i <= inpX; i++)
                         {
                                 res = res * i;
                         }
                         System.out.print("The factorial is: ");
                         System.out.println(res);
-                        System.exit(0);
+			return res; 
                 }
 	}
 
-	void computeNaturalLog(double inpX)
+	Double computeNaturalLog(double inpX)
 	{
 		if(inpX < 0)
                 {
                         System.out.println("Well, natural log of negative numbers is not defined!, Exiting...");
-                        System.exit(1);
-                }
+                	return null;
+		}
                 else if(inpX == 0.0)
                 {
                         System.out.println("Natural log of 0 is not defined! Exiting...");
-                        System.exit(1);
-                }
+                	return null; 
+		}
                 else
                 {
-                        double res = Math.log(inpX);
+                        Double res = Math.log(inpX);
                         System.out.print("The natural log is: ");
                         System.out.println(res);
-                        System.exit(0);
+			return res; 
                 }
 	}
 
-	void computePower(double base, double power)
+	Double computePower(double base, double power)
 	{
-		double res = Math.pow(base, power);
+		Double res = Math.pow(base, power);
 		System.out.print("The result is: ");
                 System.out.println(res);
-                System.exit(0);
+		return res; 
 	}
 }
