@@ -2,7 +2,7 @@ package org.example;
 
 public class Calculator
 {
-	Double computeSquareRoot(double inpX)
+	Double computeSquareRoot(Double inpX)
 	{
                 if(inpX < 0)
                 {
@@ -18,7 +18,7 @@ public class Calculator
                 }
 	}
 
-	Integer computeFactorial(int inpX)
+	Integer computeFactorial(Integer inpX)
 	{
 		if(inpX < 0)
                 {
@@ -38,7 +38,7 @@ public class Calculator
                 }
 	}
 
-	Double computeNaturalLog(double inpX)
+	Double computeNaturalLog(Double inpX)
 	{
 		if(inpX < 0)
                 {
@@ -59,7 +59,7 @@ public class Calculator
                 }
 	}
 
-	Double computePower(double base, double power)
+	Double computePower(Double base, Double power)
 	{
 		Double res = Math.pow(base, power);
 		System.out.print("The result is: ");
