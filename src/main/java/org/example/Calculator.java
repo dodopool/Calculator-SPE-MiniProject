@@ -62,8 +62,16 @@ public class Calculator
 	Double computePower(Double base, Double power)
 	{
 		Double res = Math.pow(base, power);
-		System.out.print("The result is: ");
-                System.out.println(res);
-		return res; 
+		if(Double.isNaN(res))
+		{
+			System.out.println("Error, cannot compute power");
+			return null;
+		}
+		else
+		{
+			System.out.print("The result is: ");
+			System.out.println(res);
+			return res; 
+		}
 	}
 }
