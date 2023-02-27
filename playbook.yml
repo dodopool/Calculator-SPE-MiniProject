@@ -1,0 +1,20 @@
+---
+- name: Pull Docker Image and Deploy It
+  hosts: SlaveNodes
+  vars:
+          ansible_python_interpreter: /usr/bin/python3
+  become: yes
+  become_method: sudo
+  tasks:
+          - name: Ensure that Docker service is enabled
+            service:
+                    name: docker
+                    state: started
+
+          - name: Pull the Docker Image
+            docker_image:
+                    name: rangoota/basicrepo:latest
+                    source: pull
+
+          - name: Run the Container
+            shell: docker run -it -d rangoota/basicrepo:latest
