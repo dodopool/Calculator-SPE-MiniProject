@@ -1,2 +1,2 @@
 [SlaveNodes]
-ansiblespeslave ansible_host=172.18.0.4
+speminiprojectslave ansible_host=172.16.138.79
