@@ -1,7 +1,12 @@
 package org.example;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Calculator
 {
+	private static final Logger logUtility = LogManager.getLogger(Calculator.class);
+
 	Double computeSquareRoot(Double inpX)
 	{
                 if(inpX < 0)
