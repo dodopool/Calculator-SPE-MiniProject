@@ -2,8 +2,13 @@ package org.example;
 
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Main
 {
+    private static final Logger logUtility = LogManager.getLogger(Main.class);
+
     public static void main(String[] args) 
     {
         System.out.println("Welcome to Scientific Calculator");
