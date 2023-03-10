@@ -33,19 +33,22 @@ public class Main
 	{
 		System.out.print("Enter the number whose square root is to be calculated: ");
 		double inpX = inputReceiver.nextDouble();
-		calcObj.computeSquareRoot(inpX);
+		logUtility.info("[SQUARE ROOT] - " + inpX);
+		logUtility.info("[RESULT] - " + calcObj.computeSquareRoot(inpX));
 	}
 	else if(choice == 2)
 	{
 		System.out.print("Enter the number of factorial is to be calculated: ");
 		int inpX = inputReceiver.nextInt();
-		calcObj.computeFactorial(inpX);
+		logUtility.info("[FACTORIAL] - " + inpX);
+		logUtility.info("[RESULT] - " + calcObj.computeFactorial(inpX));
 	}
 	else if(choice == 3)
 	{
 		System.out.print("Enter the number whose natural log is to be calculated: ");
 		double inpX = inputReceiver.nextDouble();
-		calcObj.computeNaturalLog(inpX);
+		logUtility.info("[NATURAL LOG] - " + inpX);
+		logUtility.info("[RESULT] - " + calcObj.computeNaturalLog(inpX));
 	}
 	else
 	{
@@ -53,7 +56,8 @@ public class Main
 		double base = inputReceiver.nextDouble();
 		System.out.print("Enter the power: ");
 		double power = inputReceiver.nextDouble();
-		calcObj.computePower(base, power);
+		logUtility.info("[EXPONENTIATION] - " + base + "^" + power);
+		logUtility.info("[RESULT] - " + calcObj.computePower(base, power));
 	}
     }
 }
