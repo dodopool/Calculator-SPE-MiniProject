@@ -33,22 +33,34 @@ public class Main
 	{
 		System.out.print("Enter the number whose square root is to be calculated: ");
 		double inpX = inputReceiver.nextDouble();
-		logUtility.info("[SQUARE ROOT] - " + inpX);
-		logUtility.info("[RESULT] - " + calcObj.computeSquareRoot(inpX));
+		Double result = calcObj.computeSquareRoot(inpX);
+		
+		if(result != null)
+			logUtility.info("[SQRT] - " + inpX + " - [RESULT] - " + result);
+		else
+			logUtility.error("[SQRT] - " + inpX + " - [RESULT] - " + result);
 	}
 	else if(choice == 2)
 	{
 		System.out.print("Enter the number of factorial is to be calculated: ");
 		int inpX = inputReceiver.nextInt();
-		logUtility.info("[FACTORIAL] - " + inpX);
-		logUtility.info("[RESULT] - " + calcObj.computeFactorial(inpX));
+		Integer result = calcObj.computeFactorial(inpX);
+
+		if(result != null)
+			logUtility.info("[FACTORIAL] - " + inpX + " - [RESULT] - " + result);
+		else
+			logUtility.error("[FACTORIAL] - " + inpX + " - [RESULT] - " + result);
 	}
 	else if(choice == 3)
 	{
 		System.out.print("Enter the number whose natural log is to be calculated: ");
 		double inpX = inputReceiver.nextDouble();
-		logUtility.info("[NATURAL LOG] - " + inpX);
-		logUtility.info("[RESULT] - " + calcObj.computeNaturalLog(inpX));
+		Double result = calcObj.computeNaturalLog(inpX);
+
+		if(result != null)
+			logUtility.info("[NATLOG] - " + inpX + " - [RESULT] - " + result);
+		else
+			logUtility.error("[NATLOG] - " + inpX + " - [RESULT] - " + result);
 	}
 	else
 	{
@@ -56,8 +68,12 @@ public class Main
 		double base = inputReceiver.nextDouble();
 		System.out.print("Enter the power: ");
 		double power = inputReceiver.nextDouble();
-		logUtility.info("[EXPONENTIATION] - " + base + "^" + power);
-		logUtility.info("[RESULT] - " + calcObj.computePower(base, power));
+		Double result = calcObj.computePower(base, power);
+
+		if(result != null)
+			logUtility.info("[EXPONENTIATION] - " + base + " " + power + " - [RESULT] - " + result);
+		else
+			logUtility.error("[EXPONENTIATION] - " + base + " " + power + " - [RESULT] - " + result);
 	}
     }
 }
