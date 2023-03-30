@@ -17,7 +17,9 @@ Well, better calculators do exist! But this calculator has been made while follo
 4. Ansible
 5. Ngrok
 
-I used for Ngrok for exposing Jenkins's running on my localhost, so that build can be triggered automatically as and when new commits are made. 
+I used for Ngrok for exposing Jenkins's running on my localhost, so that build can be triggered automatically as and when new commits are made.
+
+Of course, the publicly-exposed IP address is a well kept secret :D 
 ## License
 
 [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
