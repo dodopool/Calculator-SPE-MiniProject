@@ -19,7 +19,7 @@ Well, better calculators do exist! But this calculator has been made while follo
 
 I used for Ngrok for exposing Jenkins's running on my localhost, so that build can be triggered automatically as and when new commits are made.
 
-Of course, the publicly-exposed IP address is a well kept secret :D 
+Of course, the publicly-exposed IP address is a well kept secret, or is it :D
 ## License
 
 [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
